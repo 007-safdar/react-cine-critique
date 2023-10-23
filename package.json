@@ -30,7 +30,7 @@
     "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build" ,
-    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
+    "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build"
     
   },
   "browserslist": {
