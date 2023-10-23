@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/react-cine-critique/precache-manifest.23528e9aaa6361e18693af6d7f316adf.js"
+  "/react-cine-critique/precache-manifest.1dbca9f6dabeee9d721634085d8d7bca.js"
 );
 
 workbox.clientsClaim();
