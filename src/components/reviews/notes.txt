@@ -1,0 +1,85 @@
+https://unbounce.com/landing-page-template/sonora-video-background/
+
+
+Security concepts
+
+Problem statement
+Authenticate user
+Authorize permissions
+
+Key terms
+Authentication
+Authorization
+OAuth2
+OpenID Connect ()OIDC
+JSON Web tokens JWT
+
+Authentication:
+Process of validating a user
+
+Authorization
+Determinining the roles/permissions assigned to a user
+
+OAuth2
+Authorization framework which enables apps to have limited access to a resource on behalf of a resource owner
+Like Google wants to know if it can allow access to read/write change sheets
+How it Works ?
+Client server who wants to integrate will request for access with the resource owner
+The resource owner connects with the authorization server , the auth server proivdes an auth token to client.
+Client uses this token to request for access token, auth server provides access token
+This access token is required to access protected resource
+
+OpenID Connect
+Identity layer on oauth2, oauth2 provides authorization, oidc provides Authentication
+
+JWT standard token 
+Secured and digitally signed used by oauth and oidc
+
+Header -signing algo and type of token 
+payload contains data of user like username etc
+signature- a sign to preserve integrity of token
+
+SAML uses XML , oidc uses jwt
+
+authorization server provides keys 
+
+How does auth with JWT works 
+Client requests for logging in (this api request will have username,pass,email etc), if already signed with okta / part of okta people (ie people exists in the okta directory)
+assigns a private key (signature)
+Returns this sign as a part of a JWT token. maybe stored in ls(for okta) or cookies.
+for every consecutive req the jwt token is also sent as a part of the request and then this is validated with the private key on server. If valid then resource is authorized 
+jwt token is decrypted and sign is compared. JWT token has 3 parts header, payload, signature 
+
+In the code above, we imported useOktaAuth from Okta. Using the useOktaAuth hook, we get access to our Okta state and oktaAuth object. For logging in, we created a function, login, that will call oktaAuth to sign in a user, and another function, logout, to sign them out.
+A redirect URI, or reply URL, is the location where the authorization server sends the user once the app has been successfully authorized and granted an authorization code or access token
+authState object ha isAuthenticated value, which shows if user is auth or not
+
+Stores passed in tokens or tokens from redirect url into storage, then redirect users back to the page inside the app. When using PKCE authorization code flow, this method also exchanges authorization code for tokens. By default it calls window.location.replace for the redirection.
+Read more here https://github.com/okta/okta-auth-js#handleloginredirecttokens-originaluri 
+PKCE (Proof Key for Code Exchange) is an extension to the OAuth 2.0 protocol that prevents authorization code interception attacks. It is a simple, lightweight mechanism that can be implemented in any application that requests an authorization code.	Proof Key for Code Exchange (PKCE) is a flow to create a secret to use before exchanging the authorization code for tokens. This is not a grant type used on its own, but as an extra layer of security to the Authorization Code flow. 
+
+Authorization for spa with react and okta using pkce 
+https://developer.okta.com/blog/2023/04/04/spa-auth-tokens
+
+
+When a user clicks on the sign in button, The client application starts the process and generates a random, long string — the code verifier. Then it creates a code challenge from the code verifier. This step is part of the PKCE extension.
+The client application holds on to the code verifier. It then makes an authorization code request to your authorization server, in this case, represented by Okta. The authorization code request includes the code challenge along with some critical pieces of information, such as
+Client ID
+Scopes, including at least the following:
+openid required for specifying the app uses OIDC in verifying the user’s identity
+profile for accessing the user’s profile information, such as their name
+offline_access to request a Refresh Token as part of this call
+Redirect URI for the callback location within the client application when sign-in is complete
+A random alphanumeric string for preventing Cross-Site Request Forgery (CSRF)
+
+Then the authorization server redirects the user to a sign in page to enter the creds.
+on successful authorization the auth server returns an authorization code.
+with This authcode the client app makes a request to the token endpoint of the authserver with the authorization  code and code verifier 
+
+To process the token endpoint request the authorization server ensures the authorization code is still valid and that the code verifier matches the code challenge sent in the authorization request. This step is part of the PKCE extension.
+Success! The authorization server returns three tokens:
+
+Access token - used for authorization
+ID token - contains identity data for authentication
+Refresh token
+

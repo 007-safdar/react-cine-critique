@@ -1,0 +1,50 @@
+.review-page-container{
+    display: flex;
+    justify-content: stretch;
+    height: 100vh;
+}
+.review-rows-container{
+    color:white;
+    background-color: black;
+    background-image: cover;
+    max-width: 60vw;
+}
+
+.review-title{
+   background-color: black;
+   color: white;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-radius: 2px;
+    border: gold;
+}
+.review-card-image{
+    margin-top: 4rem;
+    padding-left: 1.5rem;
+    width: 60vw;
+    height : 80vh;
+  }
+.review-rows{
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+gap:3rem;
+}
+.review-input{
+    margin-top: 3.5rem;
+    width: 85%;
+    align-items: center;
+}
+
+.reviews-poster{
+    display: flex;
+    justify-content: center;
+}
+  .review-info-container{
+    display: flex;
+    width: 40vw;
+    justify-self: stretch;
+    justify-content: space-evenly;
+    background-color: black;
+    color: white;
+  }
