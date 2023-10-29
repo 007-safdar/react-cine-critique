@@ -1,16 +1,18 @@
 {
-  "main.css": "/react-cine-critique/static/css/main.c9d927a3.chunk.css",
-  "main.js": "/react-cine-critique/static/js/main.b595df66.chunk.js",
-  "main.js.map": "/react-cine-critique/static/js/main.b595df66.chunk.js.map",
-  "static/css/1.29d423ee.chunk.css": "/react-cine-critique/static/css/1.29d423ee.chunk.css",
-  "static/js/1.cb5d6242.chunk.js": "/react-cine-critique/static/js/1.cb5d6242.chunk.js",
-  "static/js/1.cb5d6242.chunk.js.map": "/react-cine-critique/static/js/1.cb5d6242.chunk.js.map",
-  "runtime~main.js": "/react-cine-critique/static/js/runtime~main.4e4b5b58.js",
-  "runtime~main.js.map": "/react-cine-critique/static/js/runtime~main.4e4b5b58.js.map",
-  "static/media/okta-sign-in.min.css": "/react-cine-critique/static/media/custom-app-default-logo.875f6a26.svg",
-  "static/css/main.c9d927a3.chunk.css.map": "/react-cine-critique/static/css/main.c9d927a3.chunk.css.map",
-  "static/css/1.29d423ee.chunk.css.map": "/react-cine-critique/static/css/1.29d423ee.chunk.css.map",
-  "index.html": "/react-cine-critique/index.html",
-  "precache-manifest.cfb2b4ead4aa02902ad9ba5ea4ccf87c.js": "/react-cine-critique/precache-manifest.cfb2b4ead4aa02902ad9ba5ea4ccf87c.js",
-  "service-worker.js": "/react-cine-critique/service-worker.js"
+  "files": {
+    "main.css": "/static/css/main.4b4f1151.chunk.css",
+    "main.js": "/static/js/main.9656668b.chunk.js",
+    "main.js.map": "/static/js/main.9656668b.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.3220b7e7.chunk.css": "/static/css/2.3220b7e7.chunk.css",
+    "static/js/2.637ace84.chunk.js": "/static/js/2.637ace84.chunk.js",
+    "static/js/2.637ace84.chunk.js.map": "/static/js/2.637ace84.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.0a9074c5a036363cf9162909173992d1.js": "/precache-manifest.0a9074c5a036363cf9162909173992d1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.3220b7e7.chunk.css.map": "/static/css/2.3220b7e7.chunk.css.map",
+    "static/css/main.4b4f1151.chunk.css.map": "/static/css/main.4b4f1151.chunk.css.map",
+    "static/media/okta-sign-in.min.css": "/static/media/yubikeyDemo.f10c9db1.png"
+  }
 }
