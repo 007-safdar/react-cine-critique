@@ -7,13 +7,13 @@ import LandingPage from './LandingPage';
 import LoadingSpinner from '../components/spinner/LoadingSpinner';
 
 function Layout () {
-    
+    const loc= useLocation();
     const {authState } = useOktaAuth();
 
     if (!authState) {
         return <LoadingSpinner />;
     }
-    const loc= useLocation();
+    
 return(
     <>
     <Header/>

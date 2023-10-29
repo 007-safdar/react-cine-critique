@@ -16,7 +16,7 @@ function Reviews({getMovieData ,movie, setReviews , reviews}){
     getMovieData(imdbId);
     //console.log(movie);
         //id is passed an arguement to this handler, this handler's code is written in app.js
-    },[]);
+    },[ getMovieData,imdbId]);
    
     const reviewSubmitHandler = async()=>{
         try{

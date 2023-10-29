@@ -2,3 +2,29 @@
     display: flex;
     justify-content: space-between;
 }
+
+.header-icon{
+    color:gold;
+}
+
+.Dev{
+    font-weight: 500;
+  color: #4070f4 !important;
+}
+
+.buttons-nav{
+    display: block;
+    overflow: hidden;
+}
+
+.temp{
+    max-width: 10rem;
+   
+}
+
+#header-right-buttons, .header-left-buttons{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+}

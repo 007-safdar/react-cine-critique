@@ -1,0 +1,20 @@
+Azure Error : 
+EXEC format error. 
+To see errors in azure go to log stream or diagnose and solve problems
+This error is due to the docker container being built in arm64 bit processor and amd64 was the azure server os 
+for this we can use  docker buildx build --push --platform linux/amd64 -t springreactmovies.azurecr.io/sprintboot-backend:1.0 -f Dockerfile .
+docker buildx build --push --platform <linux/amd64 || linux/arm64> -t <login server of azure container registory>/<image name:tagging> -f Dockerfile .
+
+Okta Error
+
+Error in authorization OAuthError: PKCE verification failed.
+Login button not clicking
+
+
+Pre-deployment check:
+Backend: Add env variables in application settings (under configurations) in azure portal
+Add port number  WEBSITES_PORT 
+EXPOSE 3000 in docker file
+
+Cmd to run docker image 
+ docker run -d -p --name test-container springreactmovies.azurecr.io/sprintboot-backend:1.0
