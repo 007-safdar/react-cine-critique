@@ -34,12 +34,22 @@ function Header() {
     return (
         <Navbar expand="lg" variant="dark">
       <Container fluid>
+        { authState.isAuthenticated ? 
+            <div>
+               
         <Navbar.Brand  href="/home">
+        <FontAwesomeIcon  className="header-icon" icon={faVideoSlash}>
+            </FontAwesomeIcon>{' '}
+            <span className="header-icon">Cine Critique</span>
+            </Navbar.Brand> 
+            </div>:
+            <Navbar.Brand  href="/">
             <FontAwesomeIcon  className="header-icon" icon={faVideoSlash}>
-            
             </FontAwesomeIcon>{' '}
             <span className="header-icon">Cine Critique</span>
             </Navbar.Brand>
+            }
+
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
