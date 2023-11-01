@@ -18,3 +18,25 @@ EXPOSE 3000 in docker file
 
 Cmd to run docker image 
  docker run -d -p --name test-container springreactmovies.azurecr.io/sprintboot-backend:1.0
+
+
+ Issue for 8 days
+ React app not rendering in production.
+ So basically once npm build is done, it strips out reract dev server. App was working well in dev server but for prod we either need to config a server (nginx)
+ or we need to use some hosting apps. Here we push the /build folder.
+ After deleting node modules and build folder and doing npm update, single page is working
+ Each page requires an index.html to work
+
+ Now second issue is when we go to other pages index.html is not being routed correctly. This is wip 
+
+
+ Changes to do on netlify: 
+ Make sure all other url paths can re-direct to index.html. Create a netlify.toml file and add the below configs 
+
+[[redirects]]
+from ="/*"
+to = "/index.html"
+status = 200
+
+
+In okta settings add the hostname in cors policy and in logout uri 

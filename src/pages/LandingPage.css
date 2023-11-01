@@ -71,7 +71,13 @@ p{
 
   @media  screen and (max-width: 800px) {
     .foreground-text{
-      font-size: 3rem;
+      font-size: 2rem;
+      justify-content: space-around;
+    }
+    .foreground-text-subtitle{
+      margin-top: 2rem;
+      height:30%;
+      margin-left: 1rem;
     }
   }
   

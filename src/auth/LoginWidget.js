@@ -1,9 +1,10 @@
 import { useOktaAuth } from "@okta/okta-react";
 import React from "react";
-import './signinwidget.css';
+
 import { useNavigate } from "react-router-dom";
 import SignInWidget from "./signinwidget";
 import LoadingSpinner from "../components/spinner/LoadingSpinner";
+import TestCreds from "./TestCreds";
 
 
 //config is passed as prop
@@ -27,17 +28,21 @@ const onSuccess=(tokens)=>{
 const onError =(err)=>{
 console.log("Error in authorization",err);
 };
-console.log(authState);
+
 
 //If authState is not present we show loading 
 if(!authState){
 return (<LoadingSpinner/>)
 }
+
 // if authenticated we take them to the app else take them to sign in widget
+
 return authState.isAuthenticated ? 
 navigate('/home')
-:
+:<div>
 <SignInWidget config={config} onSuccess={onSuccess} onError={onError}/>
+<TestCreds/>
+</div>
 };
 
 export default LoginWidget;
