@@ -87,15 +87,17 @@ function App() {
     <Security oktaAuth={oktaAuth} restoreOriginalUri={restoreOriginalUri} onAuthRequired={customAuthHandler} >
         <div className="App">
           <Routes>
-          <Route exact path='/' element ={<Layout/>}>
+        
           <Route exact path="login" element={ <LoginWidget config={oktaConfig}/>}/>
           <Route exact path="login/callback" element={<LoginCallback/>}/>
               <Route exact path='/home' element ={<Home movies={movies}/>}/>
               <Route exact path= '/Trailer/:ytTrailerId' element = {<Trailer/>}></Route>,
                <Route exact path='/Reviews/:imdbId' element = {<Reviews getMovieData={getMovieDataByImdbId} movie={movie} reviews={review} setReviews={setReview}/>}></Route>
                <Route exact path='/watchlist' element ={<Product/>}/>
+               <Route exact path='/' element ={<Layout/>}>
               </Route>
               <Route exact path='About-Us' element ={<AboutUs/>}></Route>
+             
     </Routes>
         </div>
     </Security>
