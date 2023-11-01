@@ -1,5 +1,5 @@
 {
-  "homepage": "https://007-safdar.github.io/react-cine-critique",
+  "homepage": "",
   "name": "spring-movies-v1",
   "version": "0.1.0",
   "private": true,
@@ -28,8 +28,6 @@
   },
   "scripts": {
     "start": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-    "predeploy":"npm run build",
-    "deploy": "gh-pages -d build",
     "build": "export SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build"
   },
   "browserslist": {
